@@ -35,13 +35,11 @@ def add_proc(gantt, procs, proc):
 
 
 def create_gantt(procs):
+    procs = procs[::-1]
     lenght = len(procs)
-    t_total = 0
+    t_total = procs[0]["Tempo Total"]
     ylabels = [proc["Processo"] for proc in procs]
-    fig, gantt = plt.subplots()
-
-    for proc in procs:
-        t_total += proc["Tempo Total"]
+    fig, gantt = plt.subplots(figsize=(16, 9))
 
     gantt.set_xlabel('Tempo(ms)')
     gantt.set_ylabel('Processos')
@@ -49,7 +47,7 @@ def create_gantt(procs):
     gantt.set_xlim(0, t_total)
     gantt.set_ylim(0, lenght)
 
-    gantt.set_xticks(range(0, t_total), minor=True)
+    gantt.set_xticks(range(0, t_total+1), minor=False)
     gantt.grid(True, axis='x', which='both')
 
     gantt.set_yticks(range(1, lenght), minor=True)

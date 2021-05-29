@@ -1,4 +1,5 @@
 from diagram import create_gantt
+from algorithms import fifo
 import csv
 
 filename = 'lista_processos.csv'
@@ -8,18 +9,7 @@ with open(filename, 'r') as csv_data:
     for line in csv.DictReader(csv_data):
         procs.append(dict(line))
 
-print(procs)
 
+fifo_procs = fifo(procs)
 
-# procs = [
-#     {
-#         "Processo": 'Processo A',
-#         "Prioridade": 4,
-#         "Tempo de Execução": 2,
-#         "Tamanho": 4,
-#         "Tempo de Espera": 0,
-#         "Tempo Total": 5,
-#     },
-# ]
-
-# create_gantt(procs)
+create_gantt(fifo_procs)
