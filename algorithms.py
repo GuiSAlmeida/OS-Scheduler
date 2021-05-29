@@ -33,5 +33,5 @@ def sjf(procs):
 
 
 def priority(procs):
-    pri_procs = sorted(procs, key=lambda proc: proc['Prioridade'], reverse=True)
+    pri_procs = sorted(procs, key=lambda proc: proc['Prioridade'])  # to asc set thirty param (reverse=True)
     return set_wait_time(pri_procs)

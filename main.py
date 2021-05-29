@@ -4,22 +4,28 @@
 # Contact: https://www.guisalmeida.com                          #
 #################################################################
 
+import pandas as pd
 from diagram import create_gantt
 from algorithms import fifo, sjf, priority
 import csv
 
-filename = 'lista_processos.csv'
+filename = 'processos.csv'
 procs = []
 
 with open(filename, 'r') as csv_data:
     for line in csv.DictReader(csv_data):
         procs.append(dict(line))
 
-fifo_procs = fifo(procs)
-create_gantt(fifo_procs, 'FIFO - first in first out')
 
-# sjf_procs = sjf(procs)
-# create_gantt(sjf_procs, 'SJF - shortest job first')
+def main(alg, procs):
+    sorted_procs = alg(procs)
 
-# pri_procs = priority(procs)
-# create_gantt(pri_procs, 'Priority')
+    df = pd.DataFrame(sorted_procs)
+    df.to_csv(f'processos_{alg.__name__}.csv')
+
+    create_gantt(sorted_procs, f'{alg.__name__}')
+
+
+main(fifo, procs)
+main(sjf, procs)
+main(priority, procs)
