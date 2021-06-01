@@ -73,7 +73,7 @@ python3 main.py
 
 [**Guilherme Almeida**](https://guisalmeida.com)
 
-See also the list of [contributors](https://github.com/GuiSAlmeida/bitconv-cli/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/GuiSAlmeida/OS-Scheduler/contributors) who participated in this project.
 
 ## 🤝 Contributing
 
