@@ -7,7 +7,7 @@ Create a gantt chart to simulate the scheduling processes of the operating syste
 These algorithms order the processes and calculate the waiting time and total time that each one obtained. Thus, it was possible to calculate the average waiting time that each process obtained and verify which algorithm obtained the best performance.
 
 ## 🏆 Challenge
-- Write an application, to simulate process scheduling policies in priority, FIFO and Shortest Job First algorithms.
+- Write an application, to simulate process scheduling policies in **Priority, FIFO and Shortest Job First** algorithms.
 
 - Simulate a process queue where who is using the CPU is
 using until finishing the process (Single core).
