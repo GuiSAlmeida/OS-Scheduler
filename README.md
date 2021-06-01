@@ -3,8 +3,7 @@
   OS Scheduler Simulation
 </h1>
 
-Create a gantt chart to simulate the scheduling processes of the operating system, using algorithms such as FIFO, SJB and priority.
-These algorithms order the processes and calculate the waiting time and total time that each one obtained. Thus, it was possible to calculate the average waiting time that each process obtained and verify which algorithm obtained the best performance.
+Create a gantt chart to simulate the scaling processes of the operating system, using algorithms such as FIFO, SJB and priority. These algorithms order the processes and calculate the waiting time and the total time that each one obtained. Thus, it is possible to calculate the average waiting time that each process obtained and verify which algorithm obtained the best performance.
 
 ## 🏆 Challenge
 - Write an application, to simulate process scheduling policies in **Priority, FIFO and Shortest Job First** algorithms.
