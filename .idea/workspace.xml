@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="197b728d-7e6f-4beb-b948-71eaabc05d4b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/escalonador.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagram.py" beforeDir="false" afterPath="$PROJECT_DIR$/diagram.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/processos.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/processos_fifo.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/processos_priority.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/processos_sjf.csv" beforeDir="false" />
@@ -32,10 +38,11 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
-  <component name="RunManager" selected="Python.main.ipynb">
+  <component name="RunManager" selected="Python.main">
     <configuration name="algorithms" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="escalonador" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -101,7 +108,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.main.ipynb" />
+        <item itemvalue="Python.main" />
         <item itemvalue="Python.algorithms" />
         <item itemvalue="Python.grafico" />
       </list>
@@ -128,5 +135,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
