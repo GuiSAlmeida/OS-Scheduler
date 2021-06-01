@@ -56,8 +56,8 @@ def create_gantt(procs, name):
         total += proc['Tempo Total']
     average = total / len(procs)
 
-    gantt.set_xlabel(f'Tempo médio de espera por processo: {average}ms')
-    gantt.set_ylabel('Processos')
+    gantt.set_xlabel(f'Tempo médio de espera por processo: {average}ms', fontsize=18)
+    gantt.set_ylabel('Processos', fontsize=18)
 
     gantt.set_xlim(0, t_total)
     gantt.set_ylim(0, lenght)
