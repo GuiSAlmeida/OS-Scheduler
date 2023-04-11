@@ -12,25 +12,25 @@ Create a gantt chart to simulate the scaling processes of the operating system, 
 using until finishing the process (Single core).
 
 ## 🗃️ Data
-|Task|Priority|Duration(ms)|Size(kb)|
+|Process|Priority|Duration(ms)|Size(kb)|
 |:---:|:---:|:---:|:---:|
-|Task A|Priority 4|2|4|
-|Task B|Priority 2|4|2|
-|Task C|Priority 1|1|3|
-|Task D|Priority 3|2|5|
-|Task E|Priority 1|1|5|
-|Task F|Priority 5|4|6|
-|Task G|Priority 3|2|2|
-|Task H|Priority 1|3|1|
+|Process A|Priority 4|2|4|
+|Process B|Priority 2|4|2|
+|Process C|Priority 1|1|3|
+|Process D|Priority 3|2|5|
+|Process E|Priority 1|1|5|
+|Process F|Priority 5|4|6|
+|Process G|Priority 3|2|2|
+|Process H|Priority 1|3|1|
 
 ## 📊 FIFO
-<p align="center"><img src="https://user-images.githubusercontent.com/45276342/120250291-f09fa300-c253-11eb-9fb5-4c9c3e224933.png" alt="FIFO-gantt-chart png" /></p>
+<p align="center"><img src="./files/images/Screenshot from 2023-04-11 19-31-54.png" alt="FIFO-gantt-chart png" /></p>
 
 ## 📊 Shortest Job First
-<p align="center"><img src="https://user-images.githubusercontent.com/45276342/120252071-d9fc4a80-c259-11eb-970d-0e3b3f6b0379.png" alt="SJB-gantt-chart png" /></p>
+<p align="center"><img src="./files/images/Screenshot from 2023-04-11 19-32-10.png" alt="SJB-gantt-chart png" /></p>
 
 ## 📊 Priority
-<p align="center"><img src="https://user-images.githubusercontent.com/45276342/120252106-f00a0b00-c259-11eb-9f61-fbec5348ee7f.png" alt="PRI-gantt-chart png" /></p>
+<p align="center"><img src="./files/images/Screenshot from 2023-04-11 19-32-22.png" alt="PRI-gantt-chart png" /></p>
 
 
 <!-- ## 🛠️ Installation Steps
