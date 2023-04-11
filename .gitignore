@@ -127,3 +127,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+/files/*_fifo.csv
+/files/*_sjf.csv
+/files/*_priority.csv

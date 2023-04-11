@@ -9,7 +9,7 @@ from diagram import create_gantt
 from algorithms import fifo, sjf, priority
 import csv
 
-filename = 'files/processos.csv'
+filename = 'files/process.csv'
 procs = []
 
 with open(filename, 'r') as csv_data:
@@ -21,7 +21,7 @@ def main(alg, procs):
     sorted_procs = alg(procs)
 
     df = pd.DataFrame(sorted_procs)
-    df.to_csv(f'files/processos_{alg.__name__}.csv')
+    df.to_csv(f'files/processs_{alg.__name__}.csv')
 
     create_gantt(sorted_procs, f'{alg.__name__}')
 

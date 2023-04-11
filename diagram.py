@@ -10,11 +10,11 @@ from random import random
 
 
 def add_proc(gantt, procs, proc):
-    t_wait = int(proc["Tempo de Espera"])
-    duration = int(proc["Tempo de Execução"])
+    t_wait = int(proc["Waiting time"])
+    duration = int(proc["Runtime"])
 
-    assert t_wait >= 0, f"Erro no processo {proc}, tempo inicial não pode ser negativo."
-    assert duration > 0, f"Erro no processo {proc}, duração deve ser maior que zero."
+    assert t_wait >= 0, f"Error in process {proc}, start time cannot be negative."
+    assert duration > 0, f"Error in process {proc}, duration must be greater than zero."
 
     r = random()
     g = random()
@@ -27,13 +27,13 @@ def add_proc(gantt, procs, proc):
         [(t_wait, duration)],
         (index, 1),
         facecolor=color,
-        label=f'{proc["Processo"]}'
+        label=f'{proc["Process"]}'
     )
 
     gantt.text(
         x=(t_wait + duration / 2),
         y=(index + 0.5),
-        s=f'{duration}ms\n{proc["Tamanho"]}kb\nP{proc["Prioridade"]}',
+        s=f'{duration}ms\n{proc["Size"]}kb\nP{proc["Priority"]}',
         va="center",
         ha="center",
         color="white",
@@ -44,20 +44,20 @@ def add_proc(gantt, procs, proc):
 def create_gantt(procs, name):
     procs = procs[::-1]
     lenght = len(procs)
-    t_total = procs[0]["Tempo Total"]
-    ylabels = [proc["Processo"] for proc in procs]
+    t_total = procs[0]["Total time"]
+    ylabels = [proc["Process"] for proc in procs]
     fig, gantt = plt.subplots(figsize=(16, 9))
 
-    fig.suptitle('Mapa de execução de processos em uma CPU single core', fontsize=28)
-    gantt.set_title(f'Algoritmo {name}', fontsize=18)
+    fig.suptitle('Process execution map on a single core CPU', fontsize=28)
+    gantt.set_title(f'Algorithm {name}', fontsize=18)
 
     total = 0
     for proc in procs:
-        total += proc['Tempo Total']
+        total += proc['Total time']
     average = total / len(procs)
 
-    gantt.set_xlabel(f'Tempo médio de espera por processo: {average}ms', fontsize=18)
-    gantt.set_ylabel('Processos', fontsize=18)
+    gantt.set_xlabel(f'Average waiting time per process: {average}ms', fontsize=18)
+    gantt.set_ylabel('Processs', fontsize=18)
 
     gantt.set_xlim(0, t_total)
     gantt.set_ylim(0, lenght)

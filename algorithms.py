@@ -11,14 +11,14 @@ def set_wait_time(procs):
         index = procs.index(proc)
 
         if index == 0:
-            proc["Tempo de Espera"] = wait
-            proc['Tempo Total'] = int(proc['Tempo de Execução']) + int(proc['Tempo de Espera'])
+            proc["Waiting time"] = wait
+            proc['Total time'] = int(proc['Runtime']) + int(proc['Waiting time'])
             continue
 
-        wait += int(procs[index - 1]['Tempo de Execução'])
+        wait += int(procs[index - 1]['Runtime'])
 
-        proc['Tempo de Espera'] = wait
-        proc['Tempo Total'] = int(proc['Tempo de Execução']) + int(proc['Tempo de Espera'])
+        proc['Waiting time'] = wait
+        proc['Total time'] = int(proc['Runtime']) + int(proc['Waiting time'])
 
     return procs
 
@@ -28,10 +28,10 @@ def fifo(procs):
 
 
 def sjf(procs):
-    sjf_procs = sorted(procs, key=lambda proc: proc['Tamanho'])
+    sjf_procs = sorted(procs, key=lambda proc: proc['Size'])
     return set_wait_time(sjf_procs)
 
 
 def priority(procs):
-    pri_procs = sorted(procs, key=lambda proc: proc['Prioridade'])  # to asc set thirty param (reverse=True)
+    pri_procs = sorted(procs, key=lambda proc: proc['Priority'])  # to asc set thirty param (reverse=True)
     return set_wait_time(pri_procs)
